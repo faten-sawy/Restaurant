@@ -1,0 +1,97 @@
+.nav-container {
+  display: flex;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
+  padding-top: 1rem;
+  width: 70vw;
+  position: relative;
+  left: 15vw;
+}
+.nav-container > ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-container > ul li {
+  float: left;
+  margin-right: 25px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.nav-container > ul li:hover {
+  color: #fcb302;
+  transition: ease-in;
+}
+.middle {
+  display: flex;
+}
+.middle > h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+  margin: 0;
+}
+.logo {
+  width: 70px;
+  height: 80px;
+
+  transform: rotate(-20deg);
+}
+.right-side {
+  display: flex;
+}
+.hot-line {
+  display: flex;
+}
+.hot-line-text {
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.hot-line-text > span {
+  color: #5f5f5f;
+  font-weight: 800;
+}
+.phone-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+
+  margin-right: 12px;
+  background-color: #f43127;
+}
+.phone-icon > img {
+  /* transform: rotate(30deg); */
+  width: 60%;
+  padding-top: 10px;
+  /* padding-left: 10px; */
+  filter: brightness(0) invert(1);
+  fill: white;
+}
+.cart-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+  background-color: #fcb302;
+  margin-left: 20px;
+}
+.cart-icon > img {
+  width: 50%;
+  padding-top: 10px;
+  padding-left: 5px;
+  filter: brightness(0) invert(1);
+}
+.cart-icon > span {
+  display: inline-block;
+  color: white;
+  margin-bottom: 12px;
+}
+@media only screen and (max-width: 1022px) {
+  .nav-container {
+    width: 90vw;
+    left: 5vw;
+  }
+}
