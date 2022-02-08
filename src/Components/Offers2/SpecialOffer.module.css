@@ -1,0 +1,136 @@
+.special_offer_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  background-image: url("../../Helper/Images/special-pro_1_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: clamp(200px, 45vw, 550px);
+  margin-right: 3rem;
+  height: 500px;
+}
+.test {
+  background-color: red;
+}
+.left-section > img {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  visibility: hidden;
+  animation: left_to_right 1s 1s forwards;
+}
+.right_section {
+  width: clamp(200px, 45vw, 550px);
+}
+
+.right_section > p:first-of-type {
+  display: block;
+  color: #f43127;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.right_section > h1 {
+  font-weight: 900;
+  font-size: clamp(50px, 3vw, 1440px);
+}
+.right_section > p:nth-of-type(2) {
+  display: block;
+  color: #aeaeae;
+  font-size: clamp(40px, 1.5vw, 1440px);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.right_section > button {
+  background: linear-gradient(to right, #fcb302 50%, #f43127 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  left: 10%;
+  color: white;
+  width: 170px;
+  height: 50px;
+  border: none;
+  transition: all 0.5s ease-out;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 35px;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+}
+.right_section > button:hover {
+  background-position: left bottom;
+}
+.animate {
+  animation: forward 0.5s forwards;
+}
+.right_section > button > img {
+  width: 20%;
+  height: 40%;
+  filter: brightness(0) invert(1);
+  font-weight: 900;
+  position: relative;
+}
+.right_section ul {
+  animation: none;
+  visibility: visible;
+}
+.right_section > div {
+  width: clamp(130px, 15vw, 300px);
+  float: right;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+  animation: right_to_left 1s 1s forwards;
+}
+.right_section > div > img {
+  position: relative;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* right: -25rem; */
+}
+@keyframes right_to_left {
+  from {
+    right: -40vw;
+  }
+  to {
+    right: 2rem;
+    visibility: visible;
+  }
+}
+@keyframes left_to_right {
+  from {
+    left: -40vw;
+  }
+  to {
+    left: 0;
+    visibility: visible;
+  }
+}
+@keyframes forward {
+  from {
+    left: 0;
+  }
+  to {
+    left: 0.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .left-section {
+    width: 100vw;
+    padding: 2rem;
+  }
+  .right_section {
+    width: 100vw;
+    padding: 2rem;
+  }
+  .right_section > div {
+    width: clamp(200px, 18vw, 500px);
+  }
+}

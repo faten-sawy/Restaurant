@@ -15,7 +15,7 @@ function NavBar() {
       </ul>
       <div className={styles["middle"]}>
         <img className={styles["logo"]} src={logo} alt="logo" />
-        <h1>Yammi</h1>
+        <h1>Delicious</h1>
       </div>
       <div className={styles["right-side"]}>
         <div className={styles["hot-line"]}>

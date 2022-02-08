@@ -1,0 +1,136 @@
+.slider {
+  height: 90vh;
+  /* width: 100vw; */
+  overflow-x: hidden;
+
+  /* background-image: url("https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2021/03/slider_bg02-50x100.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: flex;
+  justify-content: center;
+  /* width: 80vw;
+  background-color: #f43127;
+  position: relative;
+  left: 15%; */
+
+  /*  flex-wrap: wrap; */
+  /* position: relative;
+  left: 20vw; */
+}
+.slider > img {
+  width: 17vw;
+  height: 250px;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+.left-section {
+  /*  background-color: aqua; */
+  width: clamp(120px, 45%, 600px);
+
+  margin-top: 10rem;
+  /* margin-right: 4rem; */
+  text-align: start;
+}
+.left-section > div:nth-of-type(1) {
+  width: 280px;
+  height: 0;
+  border-bottom: 17px solid #f43127;
+  border-top: 17px solid #f43127;
+  border-right: 12px solid transparent;
+  float: left;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  animation: showBlock 1s 1s forwards;
+  visibility: hidden;
+}
+.left-section > div:nth-of-type(1) > span {
+  padding: 1vw;
+  color: white;
+  position: relative;
+  top: -18px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.left-section > button {
+  position: relative;
+  animation: showBlock 1.5s 4s forwards;
+  visibility: hidden;
+  color: white;
+}
+.title {
+  font-size: clamp(1rem, 4vw, 4rem);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 3.8rem;
+  position: relative;
+  /* animation: test 2s;
+  animation-delay: 2s; */
+  animation: showBlock 1s 2s forwards;
+  visibility: hidden;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  animation: showBlock 1s 3s forwards;
+  visibility: hidden;
+}
+.list > li {
+  margin-bottom: 0.5rem;
+  /* font-size: 1.5em; */
+  font-size: clamp(2px, 1.5em, 100px);
+  font-weight: 500;
+}
+
+.list > li > span {
+  margin-left: 0.5em;
+}
+
+.right-section {
+  /*   background-color: blueviolet;
+  
+ */
+  width: clamp(120px, 45%, 600px);
+
+  margin-top: 4rem;
+}
+.right-section > img:first-of-type {
+  position: relative;
+  left: 14rem;
+  top: 3rem;
+}
+.right-section > img:nth-of-type(2) {
+  width: 100%;
+  height: auto;
+}
+#tomato {
+}
+/* @keyframes test {
+  from {
+    left: -40vw;
+  }
+  to {
+    left: 0;
+  }
+} */
+@keyframes showBlock {
+  from {
+    left: -40vw;
+  }
+  to {
+    left: 0;
+    visibility: visible;
+  }
+}
