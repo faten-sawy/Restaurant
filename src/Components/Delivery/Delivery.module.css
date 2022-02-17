@@ -1,0 +1,128 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow-y: -y;
+}
+.container > div {
+  height: 100%;
+  width: clamp(500px, 80vw, 1440px);
+  /* width: 62vw; */
+  background-color: #f80000;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.images {
+  width: clamp(150px, 30%, 400px);
+  position: relative;
+  left: 1vw;
+  height: 100%;
+}
+.images > img:nth-of-type(2) {
+  height: 230px;
+  width: clamp(230px, 20vw, 500px);
+  position: relative;
+  bottom: 7rem;
+  animation: forward 1s 1s forwards;
+}
+.images > img:first-of-type {
+  position: relative;
+  top: 90px;
+  left: 2vw;
+  animation: smoke 1s 1s infinite;
+}
+.middleSection {
+  margin-top: 4rem;
+  width: clamp(150px, 35%, 400px);
+  margin-left: 3rem;
+}
+.middleSection > p {
+  display: block;
+  color: white;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+.middleSection > h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: clamp(2.4rem, 3vw, 3.5rem);
+}
+.call {
+  width: clamp(150px, 25%, 400px);
+  height: 50px;
+  margin-top: 6rem;
+  border: none;
+  background-color: #fcb302;
+  color: white;
+  border-radius: 25px;
+  font-size: clamp(1rem, 1.5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+}
+.call > span {
+  /* position: relative;
+  left: -12px; */
+}
+.call span img {
+  width: 20%;
+  height: 55%;
+  filter: brightness(0) invert(1);
+}
+@media only screen and (max-width: 1201px) {
+  .container > div {
+    width: 90vw;
+  }
+  .call {
+    font-size: clamp(1rem, 2vw, 3.5rem);
+  }
+}
+@media only screen and (max-width: 737px) {
+  .container > div {
+    justify-content: center;
+  }
+  .images {
+    width: 100vw;
+  }
+  .images > img:nth-of-type(2) {
+    bottom: 0;
+    left: -90px;
+  }
+  .images > img:first-of-type {
+    top: 30px;
+    left: 11vw;
+  }
+  .middleSection {
+    width: 100vw;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .call {
+    margin-top: 1rem;
+    margin-left: 0;
+    width: 50vw;
+    font-size: clamp(1rem, 4vw, 6rem);
+  }
+}
+@keyframes forward {
+  from {
+    left: -4vw;
+  }
+  to {
+    left: 2vw;
+  }
+}
+@keyframes smoke {
+  form {
+    left: -20px;
+  }
+  to {
+    left: 3vw;
+  }
+}

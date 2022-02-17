@@ -8,7 +8,7 @@
   background-image: url("../../Helper/Images/special-pro_1_bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: clamp(200px, 45vw, 550px);
+  width: clamp(360px, 45vw, 550px);
   margin-right: 3rem;
   height: 500px;
 }
@@ -23,7 +23,7 @@
   animation: left_to_right 1s 1s forwards;
 }
 .right_section {
-  width: clamp(200px, 45vw, 550px);
+  width: clamp(360px, 45vw, 550px);
 }
 
 .right_section > p:first-of-type {
@@ -80,7 +80,7 @@
   visibility: visible;
 }
 .right_section > div {
-  width: clamp(130px, 15vw, 300px);
+  width: clamp(320px, 15vw, 300px);
   float: right;
   position: relative;
   top: -50px;
@@ -128,9 +128,9 @@
   }
   .right_section {
     width: 100vw;
-    padding: 2rem;
+    padding-left: 2rem;
   }
   .right_section > div {
-    width: clamp(200px, 18vw, 500px);
+    width: clamp(320px, 18vw, 500px);
   }
 }

@@ -1,4 +1,3 @@
-import styles from "./App.module.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Pages/Home/Home";
 function App() {

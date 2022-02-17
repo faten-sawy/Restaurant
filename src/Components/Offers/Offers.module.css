@@ -20,7 +20,7 @@
   /* width: 550px;
   min-width: 200px; */
   margin-right: 1rem;
-  width: clamp(200px, 45vw, 550px);
+  width: clamp(360px, 45vw, 550px);
 }
 .left-section {
   height: 420px;
