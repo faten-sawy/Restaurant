@@ -24,13 +24,12 @@ function Chefs() {
         <div
           style={{
             backgroundImage: `url(${item.bg})`,
-            width: "20vw",
-            height: "40vh",
           }}
           onMouseOver={handleOverlay}
           onMouseOut={handleNoOverlay}
           className={styles.zeft}
         >
+          {/* className={isOverlay ? styles.overlay : styles.withNoOverlay} */}
           <div className={isOverlay ? styles.overlay : styles.withNoOverlay}>
             <ul>
               <li>
@@ -47,7 +46,10 @@ function Chefs() {
               </li>
             </ul>
           </div>
-          <div></div>
+          <div className={styles.footer}>
+            <p>{item.name}</p>
+            <p>{item.title}</p>
+          </div>
         </div>
       ))}
     </div>
