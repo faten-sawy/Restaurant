@@ -1,0 +1,38 @@
+.topButton {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  background-color: red;
+  width: 50px;
+  min-height: 7vh;
+  /* height: auto; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50px;
+  cursor: pointer;
+  animation: top 2s infinite;
+  z-index: 1;
+}
+.topButton > img {
+  filter: brightness(0) invert(1);
+  height: 20px;
+  position: relative;
+  font-weight: 300;
+}
+.topButton > p {
+  text-align: center;
+  color: white;
+  margin-top: 0.5rem;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+@keyframes top {
+  from {
+    bottom: 50px;
+  }
+  to {
+    bottom: 70px;
+  }
+}

@@ -3,7 +3,7 @@
   /* background-color: aquamarine; */
   justify-content: space-between;
   padding-top: 1rem;
-  width: 70vw;
+  width: clamp(360px, 70vw, 1440px);
   position: relative;
   left: 15vw;
 }

@@ -9,8 +9,8 @@ function Delivery() {
     <div className={styless.container}>
       <div>
         <div className={styless.images}>
-          <img src={smoke} />
-          <img src={bike} />
+          <img src={smoke} alt="smoke" />
+          <img src={bike} alt="bike" />
         </div>
         <div className={styless.middleSection}>
           <h1>Get Free Delivery!</h1>
@@ -21,7 +21,7 @@ function Delivery() {
         </div>
         <button className={styless.call}>
           <span>
-            <img src={phone} />
+            <img src={phone} alt="phone icon" />
           </span>
           Call: +1234567899
         </button>

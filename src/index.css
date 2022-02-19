@@ -1,19 +1,16 @@
 * {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  margin: 0;
-  padding: 0;
-}
+
 html,
 body {
   scroll-behavior: smooth;
-  width: auto;
-  min-width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -24,10 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 body {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -42,3 +39,12 @@ body {
   margin: 0 auto;
 }
  */
+@media only screen and (max-width: 477px) {
+  html,
+  body {
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
