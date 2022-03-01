@@ -10,49 +10,42 @@ import linkedin from "../../Helper/Icons/linkedin-svgrepo-com.svg";
 import pinterest from "../../Helper/Icons/pinterest-svgrepo-com.svg";
 
 function Chefs() {
-  const [isOverlay, setIsOverlay] = useState(false);
-
-  const handleOverlay = () => {
-    setIsOverlay(true);
-  };
-  const handleNoOverlay = () => {
-    setIsOverlay(false);
-  };
   return (
-    <div className={styles.chefsContainer}>
-      {list.map((item) => (
-        <div
-          style={{
-            backgroundImage: `url(${item.bg})`,
-          }}
-          onMouseOver={handleOverlay}
-          onMouseOut={handleNoOverlay}
-          className={styles.zeft}
-        >
-          {/* className={isOverlay ? styles.overlay : styles.withNoOverlay} */}
-          <div className={isOverlay ? styles.overlay : styles.withNoOverlay}>
-            <ul>
-              <li>
-                <img src={facebook} alt="icon" />
-              </li>
-              <li>
-                <img src={twitter} alt="icon" />
-              </li>
-              <li>
-                <img src={linkedin} alt="icon" />
-              </li>
-              <li>
-                <img src={pinterest} alt="icon" />
-              </li>
-            </ul>
+    <>
+      <h1 className={styles.header}>Our Special Chefs</h1>
+      <div className={styles.chefsContainer}>
+        {list.map((item) => (
+          <div
+            style={{
+              backgroundImage: `url(${item.bg})`,
+            }}
+            className={styles.zeft}
+          >
+            {/* className={isOverlay ? styles.overlay : styles.withNoOverlay} */}
+            <div className={styles.overlay}>
+              <ul className={styles.lis}>
+                <li>
+                  <img src={facebook} alt="icon" />
+                </li>
+                <li>
+                  <img src={twitter} alt="icon" />
+                </li>
+                <li>
+                  <img src={linkedin} alt="icon" />
+                </li>
+                <li>
+                  <img src={pinterest} alt="icon" />
+                </li>
+              </ul>
+            </div>
+            <div className={styles.footer}>
+              <p>{item.name}</p>
+              <p>{item.title}</p>
+            </div>
           </div>
-          <div className={styles.footer}>
-            <p>{item.name}</p>
-            <p>{item.title}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 const list = [

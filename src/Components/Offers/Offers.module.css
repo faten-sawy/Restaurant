@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /*  padding-top: 8rem; */
   overflow-x: hidden;
   margin-bottom: 2rem;
 }
@@ -17,15 +16,12 @@
 .right-section div {
   height: 200px;
 
-  /* width: 550px;
-  min-width: 200px; */
   margin-right: 1rem;
   width: clamp(360px, 45vw, 550px);
 }
 .left-section {
   height: 420px;
-  /* width: 500px;
-  min-width: 200px; */
+
   width: clamp(200px, 45vw, 550px);
   background: url("../../Helper/Images/offer-banner_1.jpg");
   background-repeat: no-repeat;
@@ -44,114 +40,24 @@
   transform: scale(1.2);
   z-index: 1;
 }
-.left-section > button {
-  background: linear-gradient(to right, #f43127 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  position: relative;
-  top: 90%;
-  transform: translateY(-100%);
-  left: 10%;
-  color: black;
-  width: 170px;
-  height: 50px;
-  border: none;
-  transition: all 0.5s ease-out;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 900;
-  border-radius: 35px;
-  margin-top: 1rem;
-  letter-spacing: 0.1rem;
-}
-.left-section > button:hover {
-  background-position: left bottom;
-  color: white;
-}
-.no-filter {
-  filter: none;
-  margin-right: 1rem;
-}
-.with-filter {
-  margin-right: 1rem;
-  filter: brightness(0) invert(1);
-  animation: forward 0.5s forwards;
-}
+
 /* right Section - first Div */
 .right-section > div:first-of-type {
   border-radius: 25px;
   margin-bottom: 1rem;
   overflow: hidden;
   background-image: url("../../Helper/Images/offer-banner_2.jpg");
-
-  /* Full height */
-
-  /* Center and scale the image nicely */
   background-repeat: no-repeat;
   background-size: 100% 100%;
-}
-.right-section > div:first-of-type > button {
-  background: linear-gradient(to right, white 50%, #fcb302 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  color: white;
-  width: 170px;
-  height: 50px;
-  border: none;
-  transition: all 0.5s ease-out;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 900;
-  border-radius: 35px;
-  margin-top: 1rem;
-  margin-left: 3.5rem;
-  position: relative;
-  top: 30%;
-  transform: translateY(100%);
-  letter-spacing: 0.1rem;
-}
-.right-section > div button:hover {
-  background-position: left bottom;
-  color: black;
 }
 
 /* right Section - second Div */
 .right-section div:nth-of-type(2) {
-  /*   background: url("../../Helper/Images/offer-banner_3.jpg");
- */
   background-image: url("../../Helper/Images/offer-banner_3.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 25px;
   overflow: hidden;
-}
-.right-section div:nth-of-type(2) > button {
-  background: linear-gradient(to right, white 50%, #f43127 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  color: white;
-  width: 170px;
-  height: 50px;
-  border: none;
-  transition: all 0.5s ease-out;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 900;
-  border-radius: 35px;
-  margin-top: 1rem;
-
-  position: relative;
-  top: 30%;
-  transform: translateY(100%);
-  letter-spacing: 0.1rem;
-}
-.right-section div:nth-of-type(2) > button:hover {
-  background-position: left bottom;
-  color: black;
-}
-
-.right-section div > button {
-  color: white;
 }
 
 .right-section div > img {
@@ -188,8 +94,6 @@
   .right-section > div:nth-of-type(1) > button {
     margin-left: 1.5rem;
   }
-  .right-section > div:nth-of-type(2) > button {
-  }
 }
 @media only screen and (max-width: 767px) {
   .left-section {
@@ -211,13 +115,5 @@
   }
   .right-section > div:nth-of-type(2) > img {
     width: clamp(120px, 45vw, 500px);
-  }
-}
-@keyframes forward {
-  from {
-    margin-right: 1rem;
-  }
-  to {
-    margin-right: 0.5rem;
   }
 }

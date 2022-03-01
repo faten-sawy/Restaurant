@@ -6,55 +6,61 @@ import Src_3 from "../../Helper/Images/offer-pro_3.png";
 import cart from "../../Helper/Icons/shopping-cart-svgrepo-com.svg";
 import Button from "../Button/Button";
 function Offers() {
-  const [hover, setHover] = useState({
-    first: "no-filter",
-    second: "with-filter",
-    third: "with-filter",
-  });
   return (
     <div className={styles["offer-container"]}>
       <div className={styles["left-section"]}>
-        <img src={Src_1} />
-        <button
-          onMouseOver={() => setHover({ ...hover, first: "with-filter" })}
-          onMouseOut={() => setHover({ ...hover, first: "no-filter" })}
-        >
-          <img src={cart} className={styles[hover.first]} />
-          order now
-        </button>
+        <img src={Src_1} alt="pizza" />
+        <Button pro={leftButton} />
       </div>
       <div className={styles["right-section"]}>
         <div>
-          <img src={Src_2} />
-
-          <button
-            onMouseOver={() => setHover({ ...hover, second: "no-filter" })}
-            onMouseOut={() => setHover({ ...hover, second: "with-filter" })}
-          >
-            <img src={cart} className={styles[hover.second]} />
-            order now
-          </button>
-          {/*  <Button
-            text="order now"
-            bgColor="#fcb302"
-            bgColorHover="white"
-            filter={true}
-            icon={cart}
-          /> */}
+          <img src={Src_2} alt="sandwich" />
+          <Button pro={rightButtons.top} />
         </div>
         <div>
-          <img src={Src_3} />
-          <button
-            onMouseOver={() => setHover({ ...hover, third: "no-filter" })}
-            onMouseOut={() => setHover({ ...hover, third: "with-filter" })}
-          >
-            <img src={cart} className={styles[hover.third]} />
-            order now
-          </button>
+          <img src={Src_3} alt="burger sandwich" />
+          <Button pro={rightButtons.bottom} />
         </div>
       </div>
     </div>
   );
 }
+const leftButton = {
+  data: {
+    text: "order now",
+    icon: cart,
+  },
+  style: {
+    background: "linear-gradient(to right,#fcb302  50%, #f43127 50%)",
+    top: "90%",
+    transform: "translateY(-100%)",
+    left: "10%",
+  },
+};
+const rightButtons = {
+  top: {
+    data: {
+      text: "order now",
+      icon: cart,
+    },
+    style: {
+      background: "linear-gradient(to right,#f43127  50%, #fcb302 50%)",
+      top: "30%",
+      transform: "translateY(100%)",
+      marginLeft: "3.5rem",
+    },
+  },
+  bottom: {
+    data: {
+      text: "order now",
+      icon: cart,
+    },
+    style: {
+      background: "#f43127",
+      top: "30%",
+      transform: "translateY(100%)",
+    },
+  },
+};
 
 export default Offers;

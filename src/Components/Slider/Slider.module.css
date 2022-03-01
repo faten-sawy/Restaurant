@@ -62,12 +62,6 @@
   font-size: 1.3rem;
   font-weight: 600;
 }
-.left-section > button {
-  position: relative;
-  animation: showBlock 1.5s 4s forwards;
-  visibility: hidden;
-  color: white;
-}
 .title {
   font-size: clamp(1rem, 4vw, 4rem);
   text-transform: uppercase;

@@ -9,6 +9,8 @@ import Footer from "../../Components/Footer/Footer";
 import TopButton from "../../Components/TopButton/TopButton";
 import Counter from "../../Components/Counter/Counter";
 import Chefs from "../../Components/Chefs/Chefs";
+import PopularFood from "../../Components/PopularFood/PopularFood";
+import Recommended from "../../Components/Recommended/Recommended";
 function Home() {
   return (
     <>
@@ -16,6 +18,8 @@ function Home() {
       <Category />
       <Slider />
       <Offers />
+      <Recommended />
+      <PopularFood />
       <SpecialOffer />
       <Counter />
       <Chefs />

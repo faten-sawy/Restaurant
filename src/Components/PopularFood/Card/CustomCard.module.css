@@ -1,0 +1,21 @@
+.card {
+  margin-right: 1rem;
+  width: 30%;
+  margin-bottom: 3rem;
+}
+.card > div {
+  position: relative;
+}
+.card > div > img:not(:nth-of-type(2)) {
+  display: none;
+  position: absolute;
+}
+.card > div > img:first-of-type {
+  left: 15%;
+  top: 53%;
+  display: none;
+}
+.card:hover > div > img:nth-of-type(1),
+img:nth-of-type(3) {
+  display: block;
+}

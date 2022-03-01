@@ -1,0 +1,67 @@
+.PopularFoodContainer {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /*   z-index: 100;
+ */
+  position: relative;
+  top: -100px;
+  background-color: white;
+  width: 60vw;
+  left: 20vw;
+}
+/* .PopularFoodContainer::before {
+  content: url("../../Helper/Images/shape27.png");
+  position: absolute;
+  left: -7vw;
+  top: 12vw;
+  width: 12px;
+  height: 12px;
+} */
+.PopularFoodContainer::before {
+  content: url("../../Helper/Images/shape34.png");
+  position: absolute;
+  left: -7vw;
+  top: 24vw;
+  width: 12px;
+  height: 12px;
+}
+.PopularFoodContainer::after {
+  content: url("../../Helper/Images/shape28.png");
+  position: absolute;
+  right: -3vw;
+  /*   right: 12vw; */
+  top: 17vw;
+  width: 12px;
+  height: 12px;
+  transform: rotate(-70deg);
+}
+.PopularFoodContainer > h1 {
+  font-family: "Caveat", cursive;
+  font-size: clamp(2em, 3vw, 12em);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.PopularFoodContainer > h1::after {
+  content: url("../../Helper/Images/title_icon_colorful.png");
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin-left: 1rem;
+}
+.PopularFoodContainer > h1::before {
+  content: url("../../Helper/Images/title_icon_colorful.png");
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin-left: -8rem;
+}
+.PopularFoodContainer > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70vw;
+}

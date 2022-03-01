@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 60px;
   right: 10px;
-  background-color: red;
+  background-color: #f43127;
   width: 50px;
-  min-height: 7vh;
+  height: 50px;
   /* height: auto; */
   display: flex;
   justify-content: center;
@@ -16,16 +16,17 @@
 }
 .topButton > img {
   filter: brightness(0) invert(1);
-  height: 20px;
+  height: 10px;
   position: relative;
   font-weight: 300;
+  margin-top: 1rem;
 }
 .topButton > p {
   text-align: center;
   color: white;
   margin-top: 0.5rem;
   font-size: 1.2em;
-  margin-bottom: 3px;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 @keyframes top {

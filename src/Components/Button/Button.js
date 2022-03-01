@@ -1,68 +1,53 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-function Button({
-  pro /* , isActive, text, bgColor, bgColorHover, icon, filter */,
-}) {
-  const { text, icon, filter } = pro;
-  /*   const [isActive, setIsActive] = useState(true);
-   */ const test = () => {
-    /*     document.getElementById("ve").style.backgroundPosition = "left bottom";
-     */
-    /*     setIsActive(true);
-     */
-  };
-  const testen = () => {
-    /*     document.getElementById("ve").style.backgroundPosition = "right bottom";
-     */
-    /* setIsActive(false); */
-  };
-  console.log(filter);
+import React from "react";
+import styled, { keyframes } from "styled-components";
+
+function Button({ pro }) {
+  const { text, icon } = pro.data;
+  console.log(pro);
   return (
-    <ButtonComponent
-      onMouseOver={test}
-      onMouseOut={testen}
-      id="ve"
-      isActive
-      filter={filter}
-    >
+    <ButtonComponent {...pro.style}>
       <Icon src={icon} />
       {text}
     </ButtonComponent>
   );
 }
+export const move = keyframes`
+from{
+  margin-right:1vw;
+}
+to{
+  margin-right:0.5vw
+}`;
 const Icon = styled.img`
-  ${"" /*  filter: brightness(0) invert(1); */}
-  filter: ${(props) => props.filter || null};
   margin-right: 0.4rem;
+  filter: brightness(0) invert(1);
 `;
 const ButtonComponent = styled.button`
-  width: 200px;
-  height: 50px;
+  background: ${({ background }) => background || null};
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: ${({ color }) => color || "white"};
+  width: 170px;
+  height: 45px;
   border: none;
   transition: all 0.5s ease-out;
   font-size: 1em;
-  text-transform: uppercase;
   font-weight: 900;
   border-radius: 35px;
   margin-top: 1rem;
-  ${
-    "" /*  background-position:${(props) =>
-    props.isActive ? "right bottom" : "left bottom"} */
-  }
-  ${
-    "" /* ${(props) => {
-    if (props.isActive) {
-      return background-position:left bottom;
-    } else {
-      return `background-position:right bottom`;
-    }
-  }} */
-  }
-  &:hover {
-    color: black;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-left: ${({ marginLeft }) => marginLeft};
+  position: relative;
+  top: ${({ top }) => top};
+  transform: ${({ transform }) => transform};
+  left: ${({ left }) => left};
 
+  &:hover {
+    background-position: left bottom;
+    color: white;
     ${Icon} {
-      filter: ${(props) => props.filter === true && "none"};
+      animation: ${move} 1s forwards;
     }
   }
 `;
