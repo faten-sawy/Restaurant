@@ -1,4 +1,4 @@
-.offer-container {
+.offer {
   height: auto;
   min-height: 400px;
   width: 100vw;
@@ -8,6 +8,23 @@
   flex-wrap: wrap;
   overflow-x: hidden;
   margin-bottom: 2rem;
+}
+.offer > h1 {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  position: relative;
+}
+.offer > h1::after {
+  content: url("../../Helper/Images/title_icon_colorful.png");
+  position: absolute;
+  height: 40px;
+  width: 40px;
+}
+.offer > h1::before {
+  content: url("../../Helper/Images/title_icon_colorful.png");
+  position: absolute;
+  height: 120px;
+  width: 120px;
 }
 .special_offer_container > img {
   width: 20%;

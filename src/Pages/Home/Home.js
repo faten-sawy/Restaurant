@@ -18,9 +18,10 @@ function Home() {
       <Category />
       <Slider />
       <Offers />
+      <SpecialOffer />
       <Recommended />
       <PopularFood />
-      <SpecialOffer />
+
       <Counter />
       <Chefs />
       <Delivery />

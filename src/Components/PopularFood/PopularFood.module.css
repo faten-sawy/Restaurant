@@ -13,14 +13,7 @@
   width: 60vw;
   left: 20vw;
 }
-/* .PopularFoodContainer::before {
-  content: url("../../Helper/Images/shape27.png");
-  position: absolute;
-  left: -7vw;
-  top: 12vw;
-  width: 12px;
-  height: 12px;
-} */
+
 .PopularFoodContainer::before {
   content: url("../../Helper/Images/shape34.png");
   position: absolute;
