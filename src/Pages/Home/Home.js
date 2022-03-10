@@ -15,7 +15,7 @@ function Home() {
   return (
     <>
       <TopButton />
-      <Category />
+      {/*  <Category /> */}
       <Slider />
       <Offers />
       <SpecialOffer />

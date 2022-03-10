@@ -9,22 +9,30 @@
   overflow-x: hidden;
   margin-bottom: 2rem;
 }
-.offer > h1 {
+.title {
   font-family: "Caveat", cursive;
   text-align: center;
   position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: clamp(3em, 4vw, 12em);
 }
-.offer > h1::after {
+.title::after {
   content: url("../../Helper/Images/title_icon_colorful.png");
   position: absolute;
   height: 40px;
   width: 40px;
+  /* margin-left: 0.5rem; */
+  width: clamp(4em, 8vw, 120em);
 }
-.offer > h1::before {
+.title::before {
   content: url("../../Helper/Images/title_icon_colorful.png");
   position: absolute;
+
   height: 120px;
   width: 120px;
+  margin-left: -8rem;
+  width: clamp(20px, 3vw, 120px);
 }
 .special_offer_container > img {
   width: 20%;

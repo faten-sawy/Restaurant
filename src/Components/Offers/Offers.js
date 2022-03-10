@@ -8,7 +8,7 @@ import Button from "../Button/Button";
 function Offers() {
   return (
     <>
-      <h1>best deal we offer</h1>
+      <h1 className={styles["title"]}>best deal we offer</h1>
       <div className={styles["offer"]}>
         <div className={styles["left-section"]}>
           <img src={Src_1} alt="pizza" />
