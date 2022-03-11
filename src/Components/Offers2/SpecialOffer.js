@@ -12,7 +12,7 @@ function SpecialOffer() {
   return (
     <div className={`${styles.special_offer_container}`}>
       <div className={styles["left-section"]}>
-        <img src={specialSrc} />
+        <img src={specialSrc} alt="pizza offer" />
       </div>
       <div id="right-section" className={`${styles.right_section}`}>
         <p>WE PUT 100% OF LOVE AND DEDICATION</p>
@@ -28,10 +28,14 @@ function SpecialOffer() {
           onMouseOut={() => setHoverClass("")}
         >
           know more
-          <img src={arrowIcon} className={styles[hoverClass]} />
+          <img
+            src={arrowIcon}
+            className={styles[hoverClass]}
+            alt="arrow icon"
+          />
         </button>
         <div>
-          <img src={shapeSrc} />
+          <img src={shapeSrc} alt="pizza shape" />
         </div>
       </div>
     </div>

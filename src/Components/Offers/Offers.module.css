@@ -1,3 +1,21 @@
+.container {
+  position: relative;
+  top: 4rem;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > p {
+  width: 60%;
+  font-size: 1.3em;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #8d8d8f;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
 .offer {
   height: auto;
   min-height: 400px;
@@ -10,29 +28,44 @@
   margin-bottom: 2rem;
 }
 .title {
+  position: relative;
   font-family: "Caveat", cursive;
   text-align: center;
   position: relative;
   text-transform: capitalize;
-  font-weight: 500;
-  font-size: clamp(3em, 4vw, 12em);
+  /* font-weight: 500; */
+  /* font-size: clamp(3em, 4vw, 12em); */
+
+  font-size: 3.5em;
+  font-weight: 100;
+  margin-bottom: 1rem;
 }
 .title::after {
-  content: url("../../Helper/Images/title_icon_colorful.png");
+  background-image: url("../../Helper/Images/title_icon_colorful.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
   position: absolute;
   height: 40px;
-  width: 40px;
-  /* margin-left: 0.5rem; */
-  width: clamp(4em, 8vw, 120em);
+  margin-left: 1rem;
+  width: clamp(2em, 4vw, 120em);
+  content: "";
+  top: 0.5rem;
 }
 .title::before {
-  content: url("../../Helper/Images/title_icon_colorful.png");
+  background-image: url("../../Helper/Images/title_icon_colorful.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
   position: absolute;
+  /*  right: 75%; */
 
-  height: 120px;
-  width: 120px;
+  height: 40px;
+  /* width: 120px; */
   margin-left: -8rem;
-  width: clamp(20px, 3vw, 120px);
+  width: clamp(2em, 4vw, 120em);
+  content: "";
+  top: 0.5rem;
 }
 .special_offer_container > img {
   width: 20%;
@@ -102,6 +135,9 @@
 }
 
 @media only screen and (max-width: 1127px) {
+  .container > p {
+    width: 60%;
+  }
   .left-section > img {
     height: 60%;
     width: 48%;
@@ -140,5 +176,36 @@
   }
   .right-section > div:nth-of-type(2) > img {
     width: clamp(120px, 45vw, 500px);
+  }
+}
+@media only screen and (max-width: 637px) {
+  .container > p {
+    font-size: 1em;
+  }
+  .title {
+    font-size: clamp(2em, 6vw, 4em);
+  }
+  .title::before {
+    /*  right: 75%; */
+    margin-left: -5rem;
+  }
+  .title::after {
+    width: clamp(2em, 2vw, 4em);
+    margin-left: 0.5em;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .container > p {
+    width: 90%;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .title::before {
+    background: none;
+  }
+  .title::after {
+    background: none;
   }
 }

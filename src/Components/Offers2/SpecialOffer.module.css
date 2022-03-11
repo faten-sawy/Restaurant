@@ -1,8 +1,10 @@
 .special_offer_container {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 7rem;
+  /* margin-top: 3rem; */
+  /*  background-color: #fdf8f3; */
 }
 
 .left-section {
@@ -12,6 +14,8 @@
   width: clamp(360px, 45vw, 550px);
   margin-right: 3rem;
   height: 500px;
+  background-color: #faf7f2;
+  box-shadow: drop #faf7f2;
 }
 .test {
   background-color: red;
@@ -24,7 +28,11 @@
   animation: left_to_right 1s 1s forwards;
 }
 .right_section {
+  /*  background-color: #faf7f2; */
   width: clamp(360px, 45vw, 550px);
+  padding: 1rem;
+  height: auto;
+  /* overflow-y: hidden; */
 }
 
 .right_section > p:first-of-type {
@@ -81,10 +89,10 @@
   visibility: visible;
 }
 .right_section > div {
-  width: clamp(320px, 15vw, 300px);
+  width: clamp(80px, 15vw, 200px);
   float: right;
   position: relative;
-  top: -50px;
+  top: -70px;
   visibility: hidden;
   animation: right_to_left 1s 1s forwards;
 }
@@ -94,7 +102,11 @@
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: -1;
   /* right: -25rem; */
+}
+.right_section > ul > li {
+  color: black;
 }
 @keyframes right_to_left {
   from {
@@ -125,13 +137,15 @@
 @media only screen and (max-width: 767px) {
   .left-section {
     width: 100vw;
-    padding: 2rem;
+    margin: 1rem;
   }
   .right_section {
     width: 100vw;
-    padding-left: 2rem;
+    /*  padding-left: 2rem; */
   }
   .right_section > div {
-    width: clamp(320px, 18vw, 500px);
+    margin-top: 3rem;
+    margin-left: 4rem;
+    width: clamp(90px, 19vw, 500px);
   }
 }

@@ -2,11 +2,19 @@
   margin-right: 1rem;
   width: 30%;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 .card > div {
   position: relative;
 }
-.card > div > img:not(:nth-of-type(2)) {
+.card > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  margin-top: 1rem;
+}
+/* .card > div > img:not(:nth-of-type(2)) {
   display: none;
   position: absolute;
 }
@@ -18,4 +26,4 @@
 .card:hover > div > img:nth-of-type(1),
 img:nth-of-type(3) {
   display: block;
-}
+} */

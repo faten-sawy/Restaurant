@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  height: 100vh;
+  height: 900px;
   width: 100vw;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -16,7 +16,7 @@
   content: url("../../Helper/Images/bottom_shape.png");
   width: 100vw;
   position: absolute;
-  top: 93vh;
+  top: 93%;
 }
 .slider > img {
   width: 17vw;
@@ -158,6 +158,7 @@
   }
   .left-section {
     margin-top: 10rem;
+    width: 280px;
   }
   .left-section > div:nth-of-type(1) {
     width: clamp(230px, 250px, 280px);

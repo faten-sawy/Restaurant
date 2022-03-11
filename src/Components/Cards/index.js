@@ -1,4 +1,5 @@
 import React, { useContext, createContext } from "react";
+import StarRatings from "react-star-ratings";
 import {
   Container,
   FoodImage,
@@ -6,6 +7,8 @@ import {
   FoodTitle,
   FoodButton,
   ButtonIcon,
+  RatingValue,
+  FoodDescription,
 } from "./styles/card";
 import cart from "../../Helper/Icons/shopping-cart-svgrepo-com.svg";
 
@@ -44,6 +47,21 @@ FoodCard.Price = function Price({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return <FoodPrice {...restProps}>{children}</FoodPrice>;
 };
+FoodCard.Rating = function Rating({ rating, ...restProps }) {
+  var context = useCardContext(cardContext);
+  return (
+    <RatingValue {...restProps}>
+      <StarRatings
+        rating={parseInt(rating)}
+        starRatedColor="orange"
+        numberOfStars={5}
+        starEmptyColor=" #d8d8d8"
+        starDimension="15px"
+        starSpacing="0px"
+      />
+    </RatingValue>
+  );
+};
 FoodCard.Button = function Button({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return (
@@ -52,4 +70,8 @@ FoodCard.Button = function Button({ children, ...restProps }) {
       {children}
     </FoodButton>
   );
+};
+FoodCard.Description = function Description({ children, ...restProps }) {
+  var context = useCardContext(cardContext);
+  return <FoodDescription {...restProps}>{children}</FoodDescription>;
 };

@@ -7,8 +7,13 @@ import cart from "../../Helper/Icons/shopping-cart-svgrepo-com.svg";
 import Button from "../Button/Button";
 function Offers() {
   return (
-    <>
+    <div className={styles["container"]}>
       <h1 className={styles["title"]}>best deal we offer</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      </p>
       <div className={styles["offer"]}>
         <div className={styles["left-section"]}>
           <img src={Src_1} alt="pizza" />
@@ -25,7 +30,7 @@ function Offers() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 const leftButton = {

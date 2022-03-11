@@ -4,37 +4,43 @@
       "id": 1,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_06-400x400.png",
       "price": 18.0,
-      "name": "BBQ Pizza Tin Tin"
+      "name": "BBQ Pizza Tin Tin",
+      "rating": 5
     },
     {
       "id": 2,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_016-400x400.png",
       "price": 21.5,
-      "name": "Burger Kingo"
+      "name": "Burger Kingo",
+      "rating": 5
     },
     {
       "id": 3,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_010-400x400.png",
       "price": 19.0,
-      "name": "Chicken Sandwich"
+      "name": "Chicken Sandwich",
+      "rating": 5
     },
     {
       "id": 4,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_011-400x400.png",
       "price": 18.5,
-      "name": "Cheese Pie"
+      "name": "Cheese Pie",
+      "rating": 5
     },
     {
       "id": 5,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_014-400x400.png",
       "price": 18.5,
-      "name": "Cans coca"
+      "name": "Cans coca",
+      "rating": 4
     },
     {
       "id": 6,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_08-400x400.png",
       "price": 17.5,
-      "name": "Burger jumbo"
+      "name": "Burger jumbo",
+      "rating": 4
     }
   ]
 }
