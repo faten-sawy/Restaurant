@@ -38,9 +38,10 @@ export const FoodTitle = styled.h4`
 export const FoodPrice = styled.p`
   color: ${({ color }) => color || null};
   font-size: ${({ fontSize }) => fontSize || "1em"};
+  margin-right: 0.5rem;
 `;
 export const RatingValue = styled.div`
-  padding-top: ${(props) => props.paddingTop || "normal"};
+  padding-top: 0.5rem ${"" /* ${(props) => props.paddingTop || "normal"} */};
   padding-bottom: ${(props) => props.paddingBottom || "normal"};
   width: ${(props) => props.width || null};
   margin: ${(props) => props.margin || null};

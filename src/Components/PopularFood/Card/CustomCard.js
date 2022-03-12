@@ -15,10 +15,7 @@ function CustomCard({ food }) {
         {/* <img src={pizza} alt="icon" /> */}
       </div>
       <div>
-        <FoodCard.Price
-          {...style.price}
-          className={styles.title}
-        >{`$ ${price}`}</FoodCard.Price>
+        <FoodCard.Price {...style.price}>{`$ ${price}`}</FoodCard.Price>
         <FoodCard.Rating rating={rating} />
       </div>
       <FoodCard.Name {...style.name}>{name}</FoodCard.Name>

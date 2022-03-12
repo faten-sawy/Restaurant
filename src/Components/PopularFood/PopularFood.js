@@ -11,12 +11,20 @@ function PopularFood() {
     console.log(menu);
   }, []);
   return (
-    <div className={styles.PopularFoodContainer}>
-      <h1>Cooked with all love</h1>
-      <div style={{ width: "100%" }}>
-        {menu?.map((item) => (
-          <CustomCard food={item} />
-        ))}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <div className={styles.PopularFoodContainer}>
+        <h1>Cooked with all love</h1>
+        <div style={{ width: "100%" }}>
+          {menu?.map((item) => (
+            <CustomCard food={item} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
   background-size: cover;
   height: 60vh;
   position: relative;
-  margin-top: 12rem;
+  top: 0;
 }
 .container::before {
   content: url("../../Helper/Images/shape7.png");
@@ -30,11 +30,11 @@
 .container > p {
   /*  background-color: blue; */
   position: relative;
-  top: 200px;
+  top: 150px;
   font-size: clamp(1.5em, 1vw, 3em);
 }
 .container > h1 {
   position: relative;
-  top: 200px;
+  top: 150px;
   font-size: clamp(1.7em, 2vw, 5em);
 }

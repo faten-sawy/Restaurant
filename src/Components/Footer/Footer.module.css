@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*  margin-top: 4rem; */
-  height: 400px;
+  min-height: 400px;
   width: 100vw;
+  overflow-y: hidden;
 }
 .container > div:first-of-type {
   display: flex;
@@ -18,8 +18,8 @@
   color: white;
 }
 .logo {
-  width: 70px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 
   transform: rotate(-20deg);
 }
@@ -28,16 +28,99 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  padding: 0;
+}
+.list > li:not(:last-of-type) {
+  margin-right: clamp(0.5rem, 2vw, 4rem);
 }
 .list > li {
-  margin-right: clamp(1rem, 2vw, 4rem);
   font-size: 1.2rem;
   cursor: pointer;
 }
 .list > li:not(:last-of-type)::after {
-  content: ".";
-  margin-left: 1.5rem;
+  content: " .";
+  padding-left: 2vw;
+  /*  text-align: center; */
 }
+/*  */
+.body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 3rem;
+  flex-wrap: wrap;
+}
+.body > div {
+  width: 280px;
+}
+.body > div:not(:last-of-type) {
+  margin-right: 3%;
+}
+.body > div > h3 {
+  color: whitesmoke;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.body > div > p {
+  color: whitesmoke;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.body > div:nth-of-type(1) > ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  margin-right: 6vw;
+  padding-left: 0;
+}
+.body > div:first-of-type > ul > li {
+  margin-right: 0.5rem;
+  border-radius: 25px;
+  border: 0.5px solid #8d8d8f;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.body > div:first-of-type > ul > li:hover {
+  background-color: #f43127;
+}
+.body > div:nth-of-type(2) > ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.body > div:nth-of-type(2) > ul > li {
+  width: 100%;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+.body > div:nth-of-type(2) > ul > li > img {
+  position: relative;
+  width: 6%;
+  filter: brightness(0) invert(1);
+}
+.body > div:nth-of-type(2) > ul > li:hover {
+  margin-left: 0.5em;
+}
+.openingHours {
+  line-height: 35px;
+}
+.openingHours > span {
+  color: #fcb302;
+}
+
+/* .body > div:nth-of-type(2) > ul > li::before {
+  content: url("../../Helper/Icons/caret-right-svgrepo-com.svg");
+  width: 10px;
+  height: 10px;
+} */
+/*  */
+
 .inputContainer {
   display: flex;
   justify-content: center;
@@ -108,10 +191,10 @@
 }
 .face {
   filter: brightness(0) invert(1);
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   position: relative;
-  top: 5px;
+  /* top: 5px */
 }
 @media only screen and (max-width: 567px) {
   .contact {
