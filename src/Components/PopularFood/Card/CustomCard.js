@@ -1,29 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./CustomCard.module.css";
 import FoodCard from "../../Cards";
-import pizza from "../../../Helper/Icons/shape21.png";
-import ions from "../../../Helper/Icons/shape22.png";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { card } from "../../../Helper/animations";
 function CustomCard({ food }) {
   const { id, price, url, name, rating } = food;
-  console.log(rating);
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    inView ? animation.start(card.animate) : animation.start(card.initial);
+  });
+
   return (
-    <FoodCard className={styles.card}>
-      <div style={{ backgroundColor: "#FAF7F2" }}>
-        {/* <img src={ions} alt="icon" /> */}
-        <FoodCard.Image src={url} alt={name} {...style.image} />
-        {/* <img src={pizza} alt="icon" /> */}
-      </div>
-      <div>
-        <FoodCard.Price {...style.price}>{`$ ${price}`}</FoodCard.Price>
-        <FoodCard.Rating rating={rating} />
-      </div>
-      <FoodCard.Name {...style.name}>{name}</FoodCard.Name>
-      <FoodCard.Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing
-      </FoodCard.Description>
-      <FoodCard.Button {...style.button}>View options</FoodCard.Button>
-    </FoodCard>
+    <motion.div className={styles.container} ref={ref} animate={animation}>
+      <FoodCard className={styles.card}>
+        <div style={{ backgroundColor: "#FAF7F2" }}>
+          <FoodCard.Image src={url} alt={name} {...style.image} />
+        </div>
+        <div>
+          <FoodCard.Price {...style.price}>{`$ ${price}`}</FoodCard.Price>
+          <FoodCard.Rating rating={rating} />
+        </div>
+        <FoodCard.Name {...style.name}>{name}</FoodCard.Name>
+        <FoodCard.Description>
+          Lorem ipsum dolor sit amet, consectetur adipiscing
+        </FoodCard.Description>
+        <FoodCard.Button {...style.button}>View options</FoodCard.Button>
+      </FoodCard>
+    </motion.div>
   );
 }
 const style = {

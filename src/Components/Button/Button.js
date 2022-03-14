@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 
 function Button({ pro }) {
   const { text, icon } = pro.data;
-  console.log(pro);
   return (
     <ButtonComponent {...pro.style}>
       <Icon src={icon} />

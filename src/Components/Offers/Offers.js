@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./Offers.module.css";
 import Src_1 from "../../Helper/Images/offer-pro_1.png";
 import Src_2 from "../../Helper/Images/offer-pro_2.png";
 import Src_3 from "../../Helper/Images/offer-pro_3.png";
 import cart from "../../Helper/Icons/shopping-cart-svgrepo-com.svg";
 import Button from "../Button/Button";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { card } from "../../Helper/animations";
 function Offers() {
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    inView ? animation.start(card.animate) : animation.start(card.initial);
+  });
   return (
     <div className={styles["container"]}>
       <h1 className={styles["title"]}>best deal we offer</h1>
@@ -14,12 +23,12 @@ function Offers() {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       </p>
-      <div className={styles["offer"]}>
-        <div className={styles["left-section"]}>
+      <div className={styles["offer"]} ref={ref}>
+        <motion.div className={styles["left-section"]} animate={animation}>
           <img src={Src_1} alt="pizza" />
           <Button pro={leftButton} />
-        </div>
-        <div className={styles["right-section"]}>
+        </motion.div>
+        <motion.div className={styles["right-section"]} animate={animation}>
           <div>
             <img src={Src_2} alt="sandwich" />
             <Button pro={rightButtons.top} />
@@ -28,7 +37,7 @@ function Offers() {
             <img src={Src_3} alt="burger sandwich" />
             <Button pro={rightButtons.bottom} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

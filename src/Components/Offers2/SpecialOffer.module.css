@@ -3,8 +3,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* margin-top: 3rem; */
-  /*  background-color: #fdf8f3; */
 }
 
 .left-section {
@@ -14,8 +12,6 @@
   width: clamp(360px, 45vw, 550px);
   margin-right: 3rem;
   height: 500px;
-  background-color: #faf7f2;
-  box-shadow: drop #faf7f2;
 }
 .test {
   background-color: red;

@@ -1,0 +1,33 @@
+.contactList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+
+  position: relative;
+  /* bottom: -5rem; */
+  /*  height: 100px */
+  /*  visibility: hidden; */
+  /*   opacity: 0;
+ */
+  /* color: white; */
+}
+.contactList > li {
+  margin-right: 0.5rem;
+  /* width: 40px;
+  height: 40px; */
+  border-radius: 50%;
+  border: solid 0.5px white;
+  /* transition: visibility 1s, opacity 1s; */
+  /*  visibility: hidden; */
+  /*   opacity: 0; */
+  /* color: white; */
+  position: relative;
+}
+.contactList > li > img {
+  /* width: 20px; */
+
+  filter: brightness(0) invert(1);
+}

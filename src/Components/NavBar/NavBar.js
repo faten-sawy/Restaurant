@@ -12,18 +12,14 @@ function NavBar() {
   const { width, height } = useWindowWidth();
 
   useEffect(() => {
-    if (width <= 768) {
-      setAppear(true);
-    } else {
-      setAppear(false);
-    }
+    width <= 768 ? setAppear(true) : setAppear(false);
   }, [width]);
 
   const handleClicked = () => {
     setIsClicked(!isClicked);
   };
   return (
-    <div className={styles["nav-bar"]}>
+    <div className={styles["nav-bar"]} a>
       <div className={styles["nav-container"]}>
         <ul
           className={

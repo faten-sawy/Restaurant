@@ -11,7 +11,7 @@ function TopButton() {
   };
   return (
     <div className={styles.topButton} onClick={handleScrollTop}>
-      <img src={arrow} />
+      <img src={arrow} alt="Top button" />
       <p>Top</p>
     </div>
   );

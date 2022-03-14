@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Chefs.module.css";
 import chef1 from "../../Helper/Images/team04-400x400.jpg";
 import chef2 from "../../Helper/Images/team02-370x435.jpg";
 import chef3 from "../../Helper/Images/team03-370x435.jpg";
-
-import facebook from "../../Helper/Icons/facebook-svgrepo-com.svg";
-import twitter from "../../Helper/Icons/twitter-svgrepo-com.svg";
-import linkedin from "../../Helper/Icons/linkedin-svgrepo-com.svg";
-import pinterest from "../../Helper/Icons/pinterest-svgrepo-com.svg";
+import Contact from "../ContactList/Contact";
 
 function Chefs() {
   return (
@@ -21,22 +17,8 @@ function Chefs() {
             }}
             className={styles.zeft}
           >
-            {/* className={isOverlay ? styles.overlay : styles.withNoOverlay} */}
             <div className={styles.overlay}>
-              <ul className={styles.lis}>
-                <li>
-                  <img src={facebook} alt="icon" />
-                </li>
-                <li>
-                  <img src={twitter} alt="icon" />
-                </li>
-                <li>
-                  <img src={linkedin} alt="icon" />
-                </li>
-                <li>
-                  <img src={pinterest} alt="icon" />
-                </li>
-              </ul>
+              <Contact width={"40px"} height={"40px"} imgWidth={"20px"} />
             </div>
             <div className={styles.footer}>
               <p>{item.name}</p>

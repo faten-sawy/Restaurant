@@ -4,15 +4,24 @@ import List from "../Slider/List";
 import arrowIcon from "../../Helper/Icons/right-arrow-svgrepo-com.svg";
 import specialSrc from "../../Helper/Images/special-pro_1.png";
 import shapeSrc from "../../Helper/Images/shape23.png";
-import { isInViewport } from "../../Helper/helper";
 
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { pizza } from "../../Helper/animations";
 function SpecialOffer() {
   const [hoverClass, setHoverClass] = useState("");
+  const [ref, inView] = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    inView ? animation.start(pizza.animate) : animation.start(pizza.initial);
+  });
 
   return (
-    <div className={`${styles.special_offer_container}`}>
+    <div ref={ref} className={`${styles.special_offer_container}`}>
       <div className={styles["left-section"]}>
-        <img src={specialSrc} alt="pizza offer" />
+        <motion.img animate={animation} src={specialSrc} alt="pizza offer" />
       </div>
       <div id="right-section" className={`${styles.right_section}`}>
         <p>WE PUT 100% OF LOVE AND DEDICATION</p>

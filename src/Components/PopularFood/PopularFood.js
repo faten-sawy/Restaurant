@@ -8,7 +8,6 @@ function PopularFood() {
     axios
       .get("http://localhost:3000/popularFood")
       .then((items) => setMenu(items.data));
-    console.log(menu);
   }, []);
   return (
     <div
