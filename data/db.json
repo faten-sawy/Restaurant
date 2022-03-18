@@ -41,6 +41,20 @@
       "price": 17.5,
       "name": "Burger jumbo",
       "rating": 4
+    },
+    {
+      "id": 7,
+      "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_02-400x400.png",
+      "price": 20.5,
+      "name": "pizza",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "url": "https://purepng.com/public/uploads/large/purepng.com-noodlenoodlechinesestaple-foodwheat-doughnudel-1411527963643z8uvx.png",
+      "price": 15.0,
+      "name": "pasta",
+      "rating": 5
     }
   ]
 }

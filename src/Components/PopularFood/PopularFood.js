@@ -5,9 +5,9 @@ import styles from "./PopularFood.module.css";
 function PopularFood() {
   const [menu, setMenu] = useState();
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/popularFood")
-      .then((items) => setMenu(items.data));
+    axios.get("http://localhost:3000/popularFood").then((items) => {
+      setMenu(items.data.filter((item) => item.rating === 5));
+    });
   }, []);
   return (
     <div

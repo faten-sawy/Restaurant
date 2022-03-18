@@ -14,20 +14,8 @@ export const Container = styled.div`
 export const FoodImage = styled.img`
   width: ${({ width }) => width || "4vw"};
   position: relative;
-  
-  &:before {
-    content: "";
-    background-image: url("../../../Helper//Icons//shape21.png")
-    position: absolute;
-    width:100vw;
-    height:100vh;
-    ${
-      "" /* top: 0;
-    right: 5vw;
-    height: 12vh; */
-    }
-    z-index: 1;
-  }
+  height: 100%;
+  z-index: 1;
 `;
 export const FoodTitle = styled.h4`
   font-weight: ${({ fontWeight }) => fontWeight};
