@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  animation: showBlock 1s 3s forwards;
+  visibility: hidden;
+}
+.list > li {
+  margin-bottom: 0.5rem;
+  /* font-size: 1.5em; */
+  font-size: clamp(2px, 1.5em, 100px);
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.list > li > span {
+  margin-left: 0.5em;
+}
+@media only screen and (max-width: 444px) {
+  .list > li {
+    font-size: 1.4em;
+  }
+}
+@keyframes showBlock {
+  from {
+    left: -40vw;
+  }
+  to {
+    left: 0;
+    visibility: visible;
+  }
+}

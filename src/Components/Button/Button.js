@@ -1,11 +1,13 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { BsFillCartFill } from "react-icons/bs";
 
 function Button({ pro }) {
   const { text, icon } = pro.data;
   return (
     <ButtonComponent {...pro.style}>
       <Icon src={icon} />
+
       {text}
     </ButtonComponent>
   );
@@ -20,6 +22,7 @@ to{
 const Icon = styled.img`
   margin-right: 0.4rem;
   filter: brightness(0) invert(1);
+  list-style: none;
 `;
 const ButtonComponent = styled.button`
   background: ${({ background }) => background || null};

@@ -23,14 +23,14 @@ function useCardContext() {
   return context;
 }
 
-export default function FoodCard({ children, ...restProps }) {
+export default function CustomCard({ children, ...restProps }) {
   return (
     <cardContext.Provider value={{}}>
       <Container {...restProps}>{children}</Container>
     </cardContext.Provider>
   );
 }
-FoodCard.Image = function Image({ src, alt, ...restProps }) {
+CustomCard.Image = function Image({ src, alt, ...restProps }) {
   var context = useCardContext(cardContext);
 
   return (
@@ -39,15 +39,15 @@ FoodCard.Image = function Image({ src, alt, ...restProps }) {
     </>
   );
 };
-FoodCard.Name = function Name({ children, ...restProps }) {
+CustomCard.Name = function Name({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return <FoodTitle {...restProps}>{children}</FoodTitle>;
 };
-FoodCard.Price = function Price({ children, ...restProps }) {
+CustomCard.Price = function Price({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return <FoodPrice {...restProps}>{children}</FoodPrice>;
 };
-FoodCard.Rating = function Rating({ rating, ...restProps }) {
+CustomCard.Rating = function Rating({ rating, ...restProps }) {
   var context = useCardContext(cardContext);
   return (
     <RatingValue {...restProps}>
@@ -62,7 +62,7 @@ FoodCard.Rating = function Rating({ rating, ...restProps }) {
     </RatingValue>
   );
 };
-FoodCard.Button = function Button({ children, ...restProps }) {
+CustomCard.Button = function Button({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return (
     <FoodButton {...restProps}>
@@ -71,7 +71,7 @@ FoodCard.Button = function Button({ children, ...restProps }) {
     </FoodButton>
   );
 };
-FoodCard.Description = function Description({ children, ...restProps }) {
+CustomCard.Description = function Description({ children, ...restProps }) {
   var context = useCardContext(cardContext);
   return <FoodDescription {...restProps}>{children}</FoodDescription>;
 };

@@ -1,0 +1,195 @@
+.container {
+  background-color: #020204;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  width: 100vw;
+  overflow-y: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.container > div:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+.middle > h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+  margin: 0;
+  color: white;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+
+  transform: rotate(-20deg);
+}
+.list {
+  color: #8d8d8f;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.list > li:not(:last-of-type) {
+  margin-right: clamp(0.5rem, 2vw, 4rem);
+}
+.list > li {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.list > li:not(:last-of-type)::after {
+  content: " .";
+  padding-left: 2vw;
+  /*  text-align: center; */
+}
+/*  */
+.body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 3rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.body > div {
+  width: 240px;
+}
+.body > div:not(:last-of-type) {
+  /* margin-right: 3%; */
+}
+.body > div > h3 {
+  color: whitesmoke;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+.body > div > p {
+  color: whitesmoke;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-right: 0.5rem;
+}
+.body > div:nth-of-type(1) > ul {
+  justify-content: flex-start;
+}
+/* ******************** */
+.body > div:nth-of-type(2) > ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.body > div:nth-of-type(2) > ul > li {
+  width: 100%;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-weight: 500;
+  list-style: none;
+}
+/*  */
+.body > div:nth-of-type(2) > ul > li:hover {
+  margin-left: 0.5em;
+}
+.openingHours {
+  line-height: 35px;
+}
+.openingHours > span {
+  color: #fcb302;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  height: 6vh;
+  /* border: #8d8d8f; */
+  margin-top: 3rem;
+}
+.inputContainer > input {
+  background-color: #1a1a1a;
+  /* border-top: #8d8d8f; */
+  width: clamp(300px, 30vw, 900px);
+  outline: none;
+  border-color: 0.5px #8d8d8f;
+  border-right: none;
+  border-top: none;
+  color: #8d8d8f;
+  font-size: 1.2em;
+}
+.inputContainer > input::placeholder {
+  position: relative;
+  left: 12px;
+  font-size: 1.2em;
+  /* text-transform: capitalize; */
+  font-weight: 500;
+}
+.inputContainer > button {
+  border: none;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  background-color: #f43127;
+  width: clamp(100px, 10vw, 500px);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.inputContainer > button:hover {
+  background-color: #fcb302;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.contact > p {
+  color: #8d8d8f;
+  font-size: 1.1em;
+}
+.contact > ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  margin-right: 6vw;
+  padding-left: 0;
+}
+.contact > ul > li {
+  margin-right: 0.5rem;
+  /*   background-color: #f43127;
+ */
+  border-radius: 25px;
+  border: 0.5px solid #8d8d8f;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.contact > ul > li:hover {
+  background-color: #f43127;
+}
+.face {
+  filter: brightness(0) invert(1);
+  height: 17px;
+  width: 17px;
+  position: relative;
+  /* top: 5px */
+}
+@media only screen and (max-width: 1006px) {
+  .body > div {
+    width: 50%;
+    margin-bottom: 1rem;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 541px) {
+  .body > div {
+    width: 100vw;
+  }
+  .body > div > p {
+    width: 70vw;
+  }
+}

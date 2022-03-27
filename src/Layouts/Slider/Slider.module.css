@@ -1,0 +1,151 @@
+.slider {
+  position: relative;
+  height: 900px;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../Helper/Images/Costa-Mesa-CA-Carne-Asada-Burritos.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.slider::after {
+  content: url("../../Helper/Images/bottom_shape.png");
+  width: 100vw;
+  position: absolute;
+  top: 93%;
+}
+.slider > img {
+  width: 17vw;
+  height: 250px;
+  position: relative;
+
+  left: 1rem;
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+.left-section {
+  /*  background-color: aqua; */
+  width: clamp(120px, 45%, 600px);
+  position: relative;
+  left: 15vw;
+
+  margin-top: 10rem;
+  /* margin-right: 4rem; */
+  text-align: start;
+}
+.left-section > div:nth-of-type(1) {
+  width: 280px;
+  height: 0;
+  border-bottom: 17px solid #f43127;
+  border-top: 17px solid #f43127;
+  border-right: 12px solid transparent;
+  float: left;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  animation: showBlock 1s 1s forwards;
+  visibility: hidden;
+}
+.left-section > div:nth-of-type(1) > span {
+  padding: 1vw;
+  color: white;
+  position: relative;
+  top: -18px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 4em /* clamp(1rem, 4vw, 4rem) */;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 3.8rem;
+  position: relative;
+  /* animation: test 2s;
+  animation-delay: 2s; */
+  animation: showBlock 1s 2s forwards;
+  visibility: hidden;
+  color: whitesmoke;
+}
+
+.right-section {
+  /*   background-color: blueviolet;
+  
+ */
+  width: clamp(120px, 45%, 600px);
+
+  margin-top: 4rem;
+}
+.right-section > img:first-of-type {
+  position: relative;
+  left: 14rem;
+  top: 3rem;
+}
+.right-section > img:nth-of-type(2) {
+  width: 100%;
+  height: auto;
+}
+#tomato {
+}
+/* 1200 1024 768 */
+@keyframes showBlock {
+  from {
+    left: -40vw;
+  }
+  to {
+    left: 0;
+    visibility: visible;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .left-section {
+    left: 10vw;
+  }
+  .slider > img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .left-section {
+    left: 5vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .left-section {
+    width: 440px;
+  }
+}
+@media only screen and (max-width: 444px) {
+  .slider {
+    justify-content: center;
+  }
+  .title {
+    font-size: 2.8em;
+    padding-right: 0.5em;
+  }
+  .list > li {
+    font-size: 1.4em;
+  }
+  .left-section {
+    margin-top: 10rem;
+    width: 280px;
+  }
+  .left-section > div:nth-of-type(1) {
+    width: clamp(230px, 250px, 280px);
+    font-size: 5px;
+    font-weight: 100;
+    margin-left: 0rem;
+  }
+}

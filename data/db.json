@@ -5,56 +5,64 @@
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_06-400x400.png",
       "price": 18.0,
       "name": "BBQ Pizza Tin Tin",
-      "rating": 5
+      "rating": 5,
+      "category": "pizza"
     },
     {
       "id": 2,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_016-400x400.png",
       "price": 21.5,
       "name": "Burger Kingo",
-      "rating": 5
+      "rating": 5,
+      "category": "burger"
     },
     {
       "id": 3,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_010-400x400.png",
       "price": 19.0,
       "name": "Chicken Sandwich",
-      "rating": 5
+      "rating": 5,
+      "category": "chicken"
     },
     {
       "id": 4,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_011-400x400.png",
       "price": 18.5,
       "name": "Cheese Pie",
-      "rating": 5
+      "rating": 5,
+      "category": "pizza"
     },
     {
       "id": 5,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_014-400x400.png",
       "price": 18.5,
       "name": "Cans coca",
-      "rating": 4
+      "rating": 4,
+      "category": "drinks"
     },
     {
       "id": 6,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_08-400x400.png",
       "price": 17.5,
       "name": "Burger jumbo",
-      "rating": 4
+      "rating": 4,
+      "category": "burger"
     },
     {
       "id": 7,
       "url": "https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2020/11/pro_02-400x400.png",
       "price": 20.5,
       "name": "pizza",
-      "rating": 5
+      "rating": 5,
+      "category": "pizza"
     },
     {
       "id": 8,
       "url": "https://purepng.com/public/uploads/large/purepng.com-noodlenoodlechinesestaple-foodwheat-doughnudel-1411527963643z8uvx.png",
       "price": 15.0,
       "name": "pasta",
-      "rating": 5
+      "rating": 5,
+      "category": "pasta"
     }
   ]
 }

@@ -1,0 +1,211 @@
+.container {
+  position: relative;
+  top: 4rem;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > p {
+  width: 60%;
+  font-size: 1.3em;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #8d8d8f;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.offer {
+  height: auto;
+  min-height: 400px;
+  width: 100vw;
+  /*  background-color: blue; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  margin-bottom: 2rem;
+}
+.title {
+  position: relative;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  position: relative;
+  text-transform: capitalize;
+  /* font-weight: 500; */
+  /* font-size: clamp(3em, 4vw, 12em); */
+
+  font-size: 3.5em;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.title::after {
+  background-image: url("../../Helper/Images/title_icon_colorful.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  height: 40px;
+  margin-left: 1rem;
+  width: clamp(2em, 4vw, 120em);
+  content: "";
+  top: 0.5rem;
+}
+.title::before {
+  background-image: url("../../Helper/Images/title_icon_colorful.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  /*  right: 75%; */
+
+  height: 40px;
+  /* width: 120px; */
+  margin-left: -8rem;
+  width: clamp(2em, 4vw, 120em);
+  content: "";
+  top: 0.5rem;
+}
+.special_offer_container > img {
+  width: 20%;
+  height: 80px;
+}
+.right-section div {
+  height: 200px;
+
+  margin-right: 1rem;
+  width: clamp(360px, 45vw, 550px);
+}
+.left-section {
+  height: 420px;
+
+  width: clamp(200px, 45vw, 550px);
+  background: url("../../Helper/Images/offer-banner_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+.left-section > img {
+  height: 100%;
+  width: 55%;
+  float: right;
+}
+.left-section > img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+/* right Section - first Div */
+.right-section > div:first-of-type {
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-image: url("../../Helper/Images/offer-banner_2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* right Section - second Div */
+.right-section div:nth-of-type(2) {
+  background-image: url("../../Helper/Images/offer-banner_3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.right-section div > img {
+  height: 80%;
+  width: 48%;
+  float: right;
+  position: relative;
+  top: 20px;
+}
+
+.right-section div:nth-of-type(2) > img {
+  float: left;
+  width: 52%;
+}
+.right-section div img:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1127px) {
+  .container > p {
+    width: 60%;
+  }
+  .left-section > img {
+    height: 60%;
+    width: 48%;
+    position: relative;
+    top: 170px;
+  }
+  .right-section > div > img {
+    height: 70%;
+    width: clamp(30px, 19vw, 245px);
+    top: 40px;
+  }
+  .right-section div:nth-of-type(2) > img {
+    width: clamp(30px, 22vw, 245px);
+  }
+  .right-section > div:nth-of-type(1) > button {
+    margin-left: 1.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .left-section {
+    margin: 0;
+    width: 100vw;
+    margin-bottom: 1rem;
+  }
+  .left-section > img {
+    height: 100%;
+    top: 0px;
+  }
+  .right-section > div {
+    margin: 0;
+    width: 100vw;
+  }
+  .right-section > div > img {
+    width: clamp(120px, 40vw, 500px);
+    height: 160px;
+  }
+  .right-section > div:nth-of-type(2) > img {
+    width: clamp(120px, 45vw, 500px);
+  }
+}
+@media only screen and (max-width: 637px) {
+  .container > p {
+    font-size: 1em;
+  }
+  .title {
+    font-size: clamp(2em, 6vw, 4em);
+  }
+  .title::before {
+    /*  right: 75%; */
+    margin-left: -5rem;
+  }
+  .title::after {
+    width: clamp(2em, 2vw, 4em);
+    margin-left: 0.5em;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .container > p {
+    width: 90%;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .title::before {
+    background: none;
+  }
+  .title::after {
+    background: none;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../Helper/Images/counter_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+  top: 0;
+}
+.container::before {
+  content: url("../../Helper/Images/shape7.png");
+  position: absolute;
+  width: 100%;
+}
+.container::after {
+  content: url("../../Helper/Images/bottom_shape.png");
+  position: absolute;
+  width: 100%;
+  bottom: -35px;
+  left: 0;
+}
+.container > p,
+.container > h1 {
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+.container > p {
+  /*  background-color: blue; */
+  position: relative;
+  top: 150px;
+  font-size: clamp(1.5em, 1vw, 3em);
+}
+.container > h1 {
+  position: relative;
+  top: 150px;
+  font-size: clamp(1.7em, 2vw, 5em);
+}
